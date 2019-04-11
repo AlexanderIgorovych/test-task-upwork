@@ -1,0 +1,15 @@
+.number {
+    border-radius: .3em;
+    border: 1px solid black;
+    padding: 6px;
+}
+
+.negative {
+    color: #ff6767;
+    border-color: #ff6767;
+}
+
+.positive {
+    color: #7ea4b3;
+    border-color: #7ea4b3;
+}

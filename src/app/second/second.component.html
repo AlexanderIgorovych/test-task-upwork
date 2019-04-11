@@ -1,3 +1,4 @@
-<p>
-  second works!
-</p>
+<div class="number" [ngClass]="{ 'positive': message > 0, 'negative': message < 0 }" fxLayout="row" fxLayoutAlign="space-between center">
+  <strong>{{ message }}</strong>
+  <span>Initial Count: {{ initialCount }}</span>
+</div>

@@ -1,3 +1,48 @@
-<p>
-  first works!
-</p>
+<div fxLayout="row" fxLayoutAlign="center center">
+  <span fxFlex="50">
+    <mat-card class="example-card">
+      <mat-card-content>
+        <app-second [message]="countLower | async" initialCount="-5"></app-second>
+      </mat-card-content>
+      <mat-card-actions>
+        <button mat-icon-button (click)="incrementLower()">
+          <mat-icon>add_circle_outline</mat-icon>
+        </button>
+        <button mat-icon-button (click)="decrementLower()">
+          <mat-icon>remove_circle_outline</mat-icon>
+        </button>
+      </mat-card-actions>
+    </mat-card>
+  </span>
+  <span fxFlex="50">
+    <mat-card class="example-card">
+      <mat-card-content>
+        <app-second [message]="countHigher | async" initialCount="10"></app-second>
+      </mat-card-content>
+      <mat-card-actions>
+        <button mat-icon-button (click)="incrementHigher()">
+          <mat-icon>add_circle_outline</mat-icon>
+        </button>
+        <button mat-icon-button (click)="decrementHigher()">
+          <mat-icon>remove_circle_outline</mat-icon>
+        </button>
+      </mat-card-actions>
+    </mat-card>
+  </span>
+</div>
+
+<br>
+
+<div class="container">
+  <div fxLayout="row" fxLayoutAlign="space-between center">
+    <button mat-icon-button (click)="startAction()">
+      <mat-icon>play_arrow</mat-icon> Play
+    </button>
+    <button mat-icon-button (click)="stopAction()">
+      <mat-icon>stop</mat-icon> Stop
+    </button>
+    <button mat-icon-button (click)="resetAction()">
+      <mat-icon>settings_backup_restore</mat-icon> Reset
+    </button>
+  </div>
+</div>
