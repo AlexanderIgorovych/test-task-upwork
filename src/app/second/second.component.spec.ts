@@ -16,7 +16,6 @@ describe('SecondComponent', () => {
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ SecondComponent, FirstComponent],
       imports: [
         MatInputModule,
         MatButtonModule,
@@ -25,8 +24,9 @@ describe('SecondComponent', () => {
         StoreModule.forRoot({
           countlower: counterReducerLower,
           counthigher: counterReducerHigher
-        })],
-      schemas: [NO_ERRORS_SCHEMA]
+        }),
+      ],
+      declarations: [ SecondComponent, FirstComponent]
     })
     .compileComponents();
   }));

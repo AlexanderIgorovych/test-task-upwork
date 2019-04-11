@@ -11,6 +11,7 @@ import { StoreModule, Store  } from '@ngrx/store';
 import { counterReducerLower, counterReducerHigher, initialStateLower, initialStateHigher } from '../store/reducers/counter-reducers';
 import * as actions from '../store/actions/counter-actions';
 
+describe('FirstComponent', () => {
   let component: FirstComponent;
   let fixture: ComponentFixture<FirstComponent>;
 
@@ -18,7 +19,6 @@ import * as actions from '../store/actions/counter-actions';
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ FirstComponent, SecondComponent],
       imports: [
         MatInputModule,
         MatButtonModule,
@@ -27,8 +27,9 @@ import * as actions from '../store/actions/counter-actions';
         StoreModule.forRoot({
           countlower: counterReducerLower,
           counthigher: counterReducerHigher
-        })],
-      schemas: [NO_ERRORS_SCHEMA]
+        }),
+      ],
+      declarations: [ FirstComponent, SecondComponent]
     })
     .compileComponents();
 
@@ -79,3 +80,5 @@ import * as actions from '../store/actions/counter-actions';
     expect(new actions.Reset().type).toEqual(expectedReset);
     expect(new actions.Stop().type).toEqual(expectedStop);
   });
+
+});

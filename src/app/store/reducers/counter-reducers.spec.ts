@@ -1,5 +1,7 @@
 import { counterReducerLower, counterReducerHigher } from './counter-reducers';
-declare var it, expect, describe;
+
+// had issue with jasmine typing conflicts, this is temporary workaround
+declare var it, expect, describe, toBe;
 
 describe('The counter reducer', () => {
     it('should increment the counter when INCREMENT action is dispatched (counterReducerLower)', () => {
