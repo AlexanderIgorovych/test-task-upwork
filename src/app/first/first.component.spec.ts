@@ -11,7 +11,6 @@ import { StoreModule, Store  } from '@ngrx/store';
 import { counterReducerLower, counterReducerHigher, initialStateLower, initialStateHigher } from '../store/reducers/counter-reducers';
 import * as actions from '../store/actions/counter-actions';
 
-describe('FirstComponent', () => {
   let component: FirstComponent;
   let fixture: ComponentFixture<FirstComponent>;
 
@@ -80,5 +79,3 @@ describe('FirstComponent', () => {
     expect(new actions.Reset().type).toEqual(expectedReset);
     expect(new actions.Stop().type).toEqual(expectedStop);
   });
-
-});
